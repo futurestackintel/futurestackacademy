@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>FutureStack Intelligence Academy — Blog</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+.page-hero {
+  position: relative; z-index: 1;
+  background: linear-gradient(135deg, #04061a 0%, #060a1e 100%);
+  padding: 64px 40px 48px;
+  border-bottom: 1px solid var(--glass-border);
+  text-align: center;
+}
+.blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.blog-card { overflow: hidden; display: flex; flex-direction: column; }
+.blog-thumb {
+  height: 140px;
+  background: linear-gradient(135deg, rgba(0,234,255,0.12), rgba(167,139,255,0.12));
+  display: flex; align-items: center; justify-content: center; font-size: 40px;
+}
+.blog-body { padding: 22px; display: flex; flex-direction: column; flex: 1; }
+.blog-tag { font-size: 10px; color: var(--gold); letter-spacing: 1px; text-transform: uppercase; font-family: var(--font-head); margin-bottom: 10px; }
+.blog-card h3 { font-family: var(--font-head); font-size: 14.5px; color: white; margin-bottom: 10px; line-height: 1.4; }
+.blog-card p { font-size: 12.5px; color: var(--muted); line-height: 1.7; flex: 1; margin-bottom: 14px; }
+.blog-meta { font-size: 11px; color: var(--muted); font-family: var(--font-mono); }
+@media (max-width: 768px) { .page-hero { padding: 48px 20px 36px; } }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo"><img src="logo.png" alt="FutureStack Intelligence Academy"><div class="nav-brand-text">FS Academy<span>Beyond The Horizon</span></div></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="bootcamp.html">Free Bootcamp</a></li>
+    <li><a href="community.html">Community</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="verify.html">Verify Certificate</a></li>
+    <li><a href="contact.html" class="nav-cta">Enroll Now</a></li>
+  </ul>
+  <div class="hamburger" id="ham"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="courses.html">Courses</a>
+  <a href="bootcamp.html">Free Bootcamp</a>
+  <a href="community.html">Community</a>
+  <a href="blog.html" class="active">Blog</a>
+  <a href="resources.html">Resources</a>
+  <a href="verify.html">Verify Certificate</a>
+  <a href="contact.html" class="m-cta">Enroll Now</a>
+</div>
+
+<div class="page-wrap">
+  <div class="page-hero">
+    <div class="section-tag" style="justify-content:center;">Insights</div>
+    <h1 class="section-title">The <span>Blog</span></h1>
+    <p style="color:var(--muted);font-size:15px;max-width:500px;margin:0 auto;line-height:1.8;">Tutorials, industry insights, and updates from the FS Academy team.</p>
+  </div>
+
+  <div class="page-wrap">
+    <div class="container">
+      <div class="blog-grid">
+
+        <div class="glass-card blog-card">
+          <div class="blog-thumb">🛡️</div>
+          <div class="blog-body">
+            <div class="blog-tag">Cybersecurity</div>
+            <h3>5 OSINT Techniques Every Beginner Should Know</h3>
+            <p>Placeholder post — real blog content goes here once you start publishing.</p>
+            <div class="blog-meta">Placeholder Date</div>
+          </div>
+        </div>
+
+        <div class="glass-card blog-card">
+          <div class="blog-thumb">🐍</div>
+          <div class="blog-body">
+            <div class="blog-tag">Python</div>
+            <h3>Why Python Is Still The Best First Language For Security</h3>
+            <p>Placeholder post — real blog content goes here once you start publishing.</p>
+            <div class="blog-meta">Placeholder Date</div>
+          </div>
+        </div>
+
+        <div class="glass-card blog-card">
+          <div class="blog-thumb">🤖</div>
+          <div class="blog-body">
+            <div class="blog-tag">AI & Automation</div>
+            <h3>How AI Agents Are Changing Everyday Automation</h3>
+            <p>Placeholder post — real blog content goes here once you start publishing.</p>
+            <div class="blog-meta">Placeholder Date</div>
+          </div>
+        </div>
+
+        <div class="glass-card blog-card">
+          <div class="blog-thumb">☁️</div>
+          <div class="blog-body">
+            <div class="blog-tag">Cloud</div>
+            <h3>Cloud Security Mistakes Beginners Make (And How To Avoid Them)</h3>
+            <p>Placeholder post — real blog content goes here once you start publishing.</p>
+            <div class="blog-meta">Placeholder Date</div>
+          </div>
+        </div>
+
+        <div class="glass-card blog-card">
+          <div class="blog-thumb">📣</div>
+          <div class="blog-body">
+            <div class="blog-tag">Academy News</div>
+            <h3>FS Academy Is Now Open — Here's What To Expect</h3>
+            <p>Placeholder post — real blog content goes here once you start publishing.</p>
+            <div class="blog-meta">Placeholder Date</div>
+          </div>
+        </div>
+
+        <div class="glass-card blog-card">
+          <div class="blog-thumb">🎓</div>
+          <div class="blog-body">
+            <div class="blog-tag">Student Success</div>
+            <h3>From Beginner To Certified — A Learning Path Breakdown</h3>
+            <p>Placeholder post — real blog content goes here once you start publishing.</p>
+            <div class="blog-meta">Placeholder Date</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><img src="logo.png" alt="FutureStack Intelligence Academy"><div class="footer-brand-name">FutureStack Intelligence Academy<span>Beyond the Horizon of Logic</span></div></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="courses.html">Courses</a>
+      <a href="bootcamp.html">Free Bootcamp</a><a href="community.html">Community</a><a href="blog.html">Blog</a>
+      <a href="resources.html">Resources</a><a href="verify.html">Verify Certificate</a><a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 FutureStack Intelligence Academy. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('ham').addEventListener('click', () => document.getElementById('mobileMenu').classList.toggle('open'));
+</script>
+</body>
+</html>
