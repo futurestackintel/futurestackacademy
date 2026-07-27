@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>FutureStack Intelligence Academy — Free Bootcamp</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+.page-hero {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(135deg, #04061a 0%, #060a1e 100%);
+  padding: 64px 40px 40px;
+  border-bottom: 1px solid var(--glass-border);
+  text-align: center;
+}
+
+.bc-countdown {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin: 32px 0 8px;
+  flex-wrap: wrap;
+}
+.bc-unit {
+  background: var(--glass);
+  border: 1px solid rgba(245,185,66,0.3);
+  border-radius: 6px;
+  padding: 14px 20px;
+  min-width: 76px;
+  text-align: center;
+}
+.bc-unit .num { font-family: var(--font-head); font-size: 26px; font-weight: 900; color: var(--gold); display: block; }
+.bc-unit .lbl { font-size: 9px; color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase; }
+
+.bc-includes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+.bc-item { padding: 24px; }
+.bc-item .b-icon { font-size: 26px; margin-bottom: 12px; }
+.bc-item h4 { font-family: var(--font-head); font-size: 13.5px; color: white; margin-bottom: 8px; }
+.bc-item p { font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+.bc-schedule { display: flex; flex-direction: column; gap: 12px; }
+.bc-day {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 22px;
+}
+.bc-day-num {
+  font-family: var(--font-mono);
+  color: var(--gold);
+  font-size: 13px;
+  min-width: 70px;
+}
+.bc-day-content h4 { font-family: var(--font-head); font-size: 13px; color: white; margin-bottom: 4px; }
+.bc-day-content p { font-size: 12.5px; color: var(--muted); }
+
+.bc-form-box { padding: 40px; max-width: 520px; margin: 0 auto; }
+.form-group { margin-bottom: 16px; }
+.form-label { display: block; font-size: 11px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; font-family: var(--font-head); }
+.form-input {
+  width: 100%;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--glass-border);
+  border-radius: 4px;
+  padding: 12px 16px;
+  color: white;
+  font-size: 13.5px;
+  font-family: var(--font-body);
+}
+.form-input::placeholder { color: var(--muted); }
+.form-input:focus { outline: none; border-color: rgba(245,185,66,0.4); }
+textarea.form-input { resize: vertical; min-height: 90px; }
+
+.btn-submit {
+  width: 100%;
+  background: linear-gradient(135deg, var(--gold), #d99e2b);
+  border: none;
+  color: var(--bg-deep);
+  font-family: var(--font-head);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.btn-submit:hover { opacity: 0.9; }
+
+@media (max-width: 768px) {
+  .page-hero { padding: 48px 20px 32px; }
+  .bc-form-box { padding: 28px 20px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="FutureStack Intelligence Academy">
+    <div class="nav-brand-text">FS Academy<span>Beyond The Horizon</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="bootcamp.html" class="active">Free Bootcamp</a></li>
+    <li><a href="community.html">Community</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="verify.html">Verify Certificate</a></li>
+    <li><a href="contact.html" class="nav-cta">Enroll Now</a></li>
+  </ul>
+  <div class="hamburger" id="ham"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="courses.html">Courses</a>
+  <a href="bootcamp.html" class="active">Free Bootcamp</a>
+  <a href="community.html">Community</a>
+  <a href="blog.html">Blog</a>
+  <a href="resources.html">Resources</a>
+  <a href="verify.html">Verify Certificate</a>
+  <a href="contact.html" class="m-cta">Enroll Now</a>
+</div>
+
+<div class="page-wrap">
+  <div class="page-hero">
+    <div class="section-tag" style="justify-content:center;">100% Free</div>
+    <h1 class="section-title">Free <span>Bootcamp</span></h1>
+    <p style="color:var(--muted);font-size:15px;max-width:520px;margin:0 auto;line-height:1.8;">A 5-day, zero-cost introduction to AI & automation — no experience required. Reserve your spot below.</p>
+
+    <div class="bc-countdown">
+      <div class="bc-unit"><span class="num" id="bc-days">00</span><span class="lbl">Days</span></div>
+      <div class="bc-unit"><span class="num" id="bc-hours">00</span><span class="lbl">Hours</span></div>
+      <div class="bc-unit"><span class="num" id="bc-mins">00</span><span class="lbl">Minutes</span></div>
+      <div class="bc-unit"><span class="num" id="bc-secs">00</span><span class="lbl">Seconds</span></div>
+    </div>
+  </div>
+
+  <div class="page-wrap">
+    <div class="container">
+
+      <!-- WHAT'S INCLUDED -->
+      <div class="section-tag">What's Included</div>
+      <h2 class="section-title">Everything You <span>Get</span></h2>
+      <div class="bc-includes-grid">
+        <div class="glass-card bc-item"><div class="b-icon">🎥</div><h4>Live Daily Sessions</h4><p>5 days of live, instructor-led sessions — recordings available if you miss one.</p></div>
+        <div class="glass-card bc-item"><div class="b-icon">🧰</div><h4>Hands-On Project</h4><p>Build one real automation project by the end of the week.</p></div>
+        <div class="glass-card bc-item"><div class="b-icon">📜</div><h4>Certificate of Completion</h4><p>A verifiable certificate for finishing the full 5-day bootcamp.</p></div>
+        <div class="glass-card bc-item"><div class="b-icon">💬</div><h4>Community Access</h4><p>Join the WhatsApp community to keep learning after the bootcamp ends.</p></div>
+      </div>
+
+      <br><br>
+
+      <!-- SCHEDULE -->
+      <div class="section-tag">5-Day Schedule</div>
+      <h2 class="section-title">What We'll <span>Cover</span></h2>
+      <div class="bc-schedule">
+        <div class="glass-card bc-day"><div class="bc-day-num">DAY 01</div><div class="bc-day-content"><h4>Intro to AI & Automation</h4><p>Core concepts, tools overview, and setting up your environment.</p></div></div>
+        <div class="glass-card bc-day"><div class="bc-day-num">DAY 02</div><div class="bc-day-content"><h4>Building Your First Workflow</h4><p>Hands-on with Make.com/n8n to automate a real repetitive task.</p></div></div>
+        <div class="glass-card bc-day"><div class="bc-day-num">DAY 03</div><div class="bc-day-content"><h4>Connecting AI To Your Workflow</h4><p>Adding AI-powered decisions and responses into your automation.</p></div></div>
+        <div class="glass-card bc-day"><div class="bc-day-num">DAY 04</div><div class="bc-day-content"><h4>Security Basics For Automations</h4><p>Keeping your workflows and data safe as you scale them up.</p></div></div>
+        <div class="glass-card bc-day"><div class="bc-day-num">DAY 05</div><div class="bc-day-content"><h4>Capstone & Certification</h4><p>Present your project and receive your certificate of completion.</p></div></div>
+      </div>
+
+      <br><br>
+
+      <!-- REGISTRATION FORM -->
+      <div class="section-tag" style="justify-content:center;">Reserve Your Spot</div>
+      <h2 class="section-title" style="text-align:center;">Register For The <span>Bootcamp</span></h2>
+      <div class="glass-card bc-form-box">
+        <form action="https://formspree.io/f/xbdqnerv" method="POST">
+          <div class="form-group"><label class="form-label">Full Name</label><input class="form-input" type="text" name="name" placeholder="Jane Doe" required></div>
+          <div class="form-group"><label class="form-label">Email Address</label><input class="form-input" type="email" name="email" placeholder="jane@example.com" required></div>
+          <div class="form-group"><label class="form-label">Country</label><input class="form-input" type="text" name="country" placeholder="e.g. Nigeria" required></div>
+          <div class="form-group"><label class="form-label">Why do you want to join?</label><textarea class="form-input" name="message" placeholder="Tell us a bit about yourself and your goals..."></textarea></div>
+          <button type="submit" class="btn-submit">Reserve My Free Spot →</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="logo.png" alt="FutureStack Intelligence Academy">
+      <div class="footer-brand-name">FutureStack Intelligence Academy<span>Beyond the Horizon of Logic</span></div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="courses.html">Courses</a>
+      <a href="bootcamp.html">Free Bootcamp</a>
+      <a href="community.html">Community</a>
+      <a href="blog.html">Blog</a>
+      <a href="resources.html">Resources</a>
+      <a href="verify.html">Verify Certificate</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 FutureStack Intelligence Academy. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script>
+const ham = document.getElementById('ham');
+const mobileMenu = document.getElementById('mobileMenu');
+ham.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+
+// Bootcamp countdown — placeholder: 14 days from page load (sync this with the homepage's date once set)
+const bootcampDate = new Date();
+bootcampDate.setDate(bootcampDate.getDate() + 14);
+
+function updateBcCountdown() {
+  const now = new Date();
+  const diff = bootcampDate - now;
+  if (diff <= 0) return;
+  const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const m = Math.floor((diff / (1000 * 60)) % 60);
+  const s = Math.floor((diff / 1000) % 60);
+  document.getElementById('bc-days').textContent = String(d).padStart(2, '0');
+  document.getElementById('bc-hours').textContent = String(h).padStart(2, '0');
+  document.getElementById('bc-mins').textContent = String(m).padStart(2, '0');
+  document.getElementById('bc-secs').textContent = String(s).padStart(2, '0');
+}
+updateBcCountdown();
+setInterval(updateBcCountdown, 1000);
+</script>
+</body>
+</html>
