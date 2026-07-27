@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>FutureStack Intelligence Academy — About</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+.page-hero {
+  position: relative; z-index: 1;
+  background: linear-gradient(135deg, #04061a 0%, #060a1e 100%);
+  padding: 64px 40px 48px;
+  border-bottom: 1px solid var(--glass-border);
+  text-align: center;
+}
+.mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.mission-text p { font-size: 15px; color: var(--muted); line-height: 1.9; margin-bottom: 18px; }
+.value-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+.value-item { padding: 24px; }
+.value-item .v-icon { font-size: 24px; margin-bottom: 10px; }
+.value-item h4 { font-family: var(--font-head); font-size: 13px; color: white; margin-bottom: 8px; }
+.value-item p { font-size: 12.5px; color: var(--muted); line-height: 1.7; }
+@media (max-width: 900px) { .mission-grid { grid-template-columns: 1fr; gap: 30px; } }
+@media (max-width: 768px) { .page-hero { padding: 48px 20px 36px; } }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo"><img src="logo.png" alt="FutureStack Intelligence Academy"><div class="nav-brand-text">FS Academy<span>Beyond The Horizon</span></div></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="bootcamp.html">Free Bootcamp</a></li>
+    <li><a href="community.html">Community</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="verify.html">Verify Certificate</a></li>
+    <li><a href="contact.html" class="nav-cta">Enroll Now</a></li>
+  </ul>
+  <div class="hamburger" id="ham"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html" class="active">About</a>
+  <a href="courses.html">Courses</a>
+  <a href="bootcamp.html">Free Bootcamp</a>
+  <a href="community.html">Community</a>
+  <a href="blog.html">Blog</a>
+  <a href="resources.html">Resources</a>
+  <a href="verify.html">Verify Certificate</a>
+  <a href="contact.html" class="m-cta">Enroll Now</a>
+</div>
+
+<div class="page-wrap">
+  <div class="page-hero">
+    <div class="section-tag" style="justify-content:center;">Our Story</div>
+    <h1 class="section-title">About FS <span>Academy</span></h1>
+    <p style="color:var(--muted);font-size:15px;max-width:520px;margin:0 auto;line-height:1.8;">Practical technology education, built by practitioners — not recycled theory.</p>
+  </div>
+
+  <div class="page-wrap">
+    <div class="container">
+      <div class="mission-grid">
+        <div class="mission-text">
+          <div class="section-tag">Our Mission</div>
+          <h2 class="section-title">Education <span>Beyond Theory</span></h2>
+          <p>FutureStack Intelligence Academy exists to make practical, project-based cybersecurity, AI, and cloud education accessible to anyone in the world — regardless of background or where they're starting from.</p>
+          <p>We built this because too much tech education stops at theory. Every course here ends in something real: a working script, a hardened server, a completed capstone.</p>
+          <p>Whether you're a university student, a career changer, or already working in tech, our goal is the same — give you skills you can prove, not just certificates you can frame.</p>
+        </div>
+        <div class="glass-card" style="padding:40px;text-align:center;">
+          <span style="font-size:48px;">🎓</span>
+          <h3 style="font-family:var(--font-head);font-size:16px;color:white;margin:16px 0 8px;">Beyond the Horizon of Logic</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.8;">A brand of FutureStack Intelligence, built to bring the same real-world technical work we do for clients into a structured learning path for students everywhere.</p>
+        </div>
+      </div>
+
+      <br><br>
+
+      <div class="section-tag">What We Stand For</div>
+      <h2 class="section-title">Our <span>Values</span></h2>
+      <div class="value-grid">
+        <div class="glass-card value-item"><div class="v-icon">🧪</div><h4>Practical Over Theoretical</h4><p>If you can't build it, you haven't learned it yet.</p></div>
+        <div class="glass-card value-item"><div class="v-icon">🌍</div><h4>Global By Default</h4><p>Built for students anywhere, not just one country or region.</p></div>
+        <div class="glass-card value-item"><div class="v-icon">🔓</div><h4>Accessible Entry Points</h4><p>A free bootcamp exists so cost is never the reason someone can't start.</p></div>
+        <div class="glass-card value-item"><div class="v-icon">📜</div><h4>Real Credentials</h4><p>Every certificate is verifiable — not just a PDF with your name on it.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><img src="logo.png" alt="FutureStack Intelligence Academy"><div class="footer-brand-name">FutureStack Intelligence Academy<span>Beyond the Horizon of Logic</span></div></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="courses.html">Courses</a>
+      <a href="bootcamp.html">Free Bootcamp</a><a href="community.html">Community</a><a href="blog.html">Blog</a>
+      <a href="resources.html">Resources</a><a href="verify.html">Verify Certificate</a><a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 FutureStack Intelligence Academy. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('ham').addEventListener('click', () => document.getElementById('mobileMenu').classList.toggle('open'));
+</script>
+</body>
+</html>
