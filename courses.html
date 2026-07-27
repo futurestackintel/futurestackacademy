@@ -1,1 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>FutureStack Intelligence Academy — Courses</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+.page-hero {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(135deg, #04061a 0%, #060a1e 100%);
+  padding: 64px 40px 48px;
+  border-bottom: 1px solid var(--glass-border);
+  text-align: center;
+}
 
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.filter-btn {
+  font-family: var(--font-head);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 8px 18px;
+  border-radius: 100px;
+  border: 1px solid var(--glass-border);
+  background: var(--glass);
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filter-btn:hover { color: white; }
+.filter-btn.active {
+  border-color: rgba(0,234,255,0.4);
+  color: var(--cyan);
+  background: rgba(0,234,255,0.08);
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.course-card {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-card .c-icon { font-size: 32px; margin-bottom: 14px; }
+.course-card h3 { font-family: var(--font-head); font-size: 15px; color: white; margin-bottom: 8px; }
+.course-card .c-level { font-size: 10px; color: var(--gold); letter-spacing: 1px; text-transform: uppercase; font-family: var(--font-head); margin-bottom: 12px; }
+.course-card p { font-size: 13px; color: var(--muted); line-height: 1.7; flex: 1; margin-bottom: 18px; }
+
+.course-outline-link {
+  font-size: 12px;
+  color: var(--cyan);
+  margin-bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.course-outline-link:hover { text-decoration: underline; }
+
+.course-meta { display: flex; align-items: center; justify-content: space-between; margin-top: auto; }
+.course-price { font-family: var(--font-head); font-size: 17px; color: var(--cyan); font-weight: 700; }
+.course-price .free { color: var(--gold); }
+
+@media (max-width: 768px) {
+  .page-hero { padding: 48px 20px 36px; }
+  .courses-grid { grid-template-columns: 1fr; gap: 14px; }
+  .course-card { padding: 22px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="FutureStack Intelligence Academy">
+    <div class="nav-brand-text">FS Academy<span>Beyond The Horizon</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="courses.html" class="active">Courses</a></li>
+    <li><a href="bootcamp.html">Free Bootcamp</a></li>
+    <li><a href="community.html">Community</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="verify.html">Verify Certificate</a></li>
+    <li><a href="contact.html" class="nav-cta">Enroll Now</a></li>
+  </ul>
+  <div class="hamburger" id="ham"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="courses.html" class="active">Courses</a>
+  <a href="bootcamp.html">Free Bootcamp</a>
+  <a href="community.html">Community</a>
+  <a href="blog.html">Blog</a>
+  <a href="resources.html">Resources</a>
+  <a href="verify.html">Verify Certificate</a>
+  <a href="contact.html" class="m-cta">Enroll Now</a>
+</div>
+
+<div class="page-wrap">
+  <div class="page-hero">
+    <div class="section-tag" style="justify-content:center;">Full Catalog</div>
+    <h1 class="section-title">Our <span>Courses</span></h1>
+    <p style="color:var(--muted);font-size:15px;max-width:500px;margin:0 auto;line-height:1.8;">Practical, project-based courses in cybersecurity, Python, AI, and cloud — every course includes a downloadable outline and ends in a verifiable certificate.</p>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="security">Cybersecurity</button>
+      <button class="filter-btn" data-filter="python">Python</button>
+      <button class="filter-btn" data-filter="ai">AI</button>
+      <button class="filter-btn" data-filter="cloud">Cloud</button>
+    </div>
+  </div>
+
+  <div class="page-wrap">
+    <div class="container">
+      <div class="courses-grid" id="coursesGrid">
+
+        <div class="glass-card course-card" data-category="security">
+          <span class="c-icon">🛡️</span>
+          <div class="c-level">Beginner</div>
+          <h3>Ethical Hacking Fundamentals</h3>
+          <p>Reconnaissance, vulnerability scanning, and exploitation basics — hands-on labs from day one.</p>
+          <a href="#" class="course-outline-link">📄 Download Course Outline</a>
+          <div class="course-meta"><span class="course-price">$49</span><span class="badge badge-cyan">Certified</span></div>
+        </div>
+
+        <div class="glass-card course-card" data-category="security">
+          <span class="c-icon">🕵️</span>
+          <div class="c-level">Intermediate</div>
+          <h3>OSINT & Digital Recon</h3>
+          <p>Open-source intelligence gathering techniques used in real security assessments.</p>
+          <a href="#" class="course-outline-link">📄 Download Course Outline</a>
+          <div class="course-meta"><span class="course-price">$45</span><span class="badge badge-cyan">Certified</span></div>
+        </div>
+
+        <div class="glass-card course-card" data-category="python">
+          <span class="c-icon">🐍</span>
+          <div class="c-level">Beginner</div>
+          <h3>Python for Security & Automation</h3>
+          <p>Build real automation scripts and security tools using Python, from scratch to deployment.</p>
+          <a href="#" class="course-outline-link">📄 Download Course Outline</a>
+          <div class="course-meta"><span class="course-price">$39</span><span class="badge badge-cyan">Certified</span></div>
+        </div>
+
+        <div class="glass-card course-card" data-category="python">
+          <span class="c-icon">⚙️</span>
+          <div class="c-level">Intermediate</div>
+          <h3>Advanced Python Scripting</h3>
+          <p>APIs, concurrency, and packaging your scripts into real deployable tools.</p>
+          <a href="#" class="course-outline-link">📄 Download Course Outline</a>
+          <div class="course-meta"><span class="course-price">$55</span><span class="badge badge-cyan">Certified</span></div>
+        </div>
+
+        <div class="glass-card course-card" data-category="cloud">
+          <span class="c-icon">☁️</span>
+          <div class="c-level">Intermediate</div>
+          <h3>Cloud Security Essentials</h3>
+          <p>Secure and harden cloud infrastructure across AWS, Azure, and Cloudflare environments.</p>
+          <a href="#" class="course-outline-link">📄 Download Course Outline</a>
+          <div class="course-meta"><span class="course-price">$59</span><span class="badge badge-cyan">Certified</span></div>
+        </div>
+
+        <div class="glass-card course-card" data-category="cloud">
+          <span class="c-icon">🌐</span>
+          <div class="c-level">Beginner</div>
+          <h3>Cloud Computing Foundations</h3>
+          <p>Core concepts of cloud infrastructure, deployment models, and everyday cloud tooling.</p>
+          <a href="#" class="course-outline-link">📄 Download Course Outline</a>
+          <div class="course-meta"><span class="course-price">$35</span><span class="badge badge-cyan">Certified</span></div>
+        </div>
+
+        <div class="glass-card course-card" data-category="ai">
+          <span class="c-icon">🤖</span>
+          <div class="c-level">Beginner</div>
+          <h3>AI & Automation Foundations</h3>
+          <p>Understand and apply AI tools and automation platforms to real business workflows.</p>
+          <a href="#" class="course-outline-link">📄 Download Course Outline</a>
+          <div class="course-meta"><span class="course-price free">Free</span><span class="badge badge-gold">Bootcamp</span></div>
+        </div>
+
+        <div class="glass-card course-card" data-category="ai">
+          <span class="c-icon">🧠</span>
+          <div class="c-level">Advanced</div>
+          <h3>Building AI Agents & Workflows</h3>
+          <p>Design and deploy autonomous AI agents for real automation and security use cases.</p>
+          <a href="#" class="course-outline-link">📄 Download Course Outline</a>
+          <div class="course-meta"><span class="course-price">$65</span><span class="badge badge-cyan">Certified</span></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="logo.png" alt="FutureStack Intelligence Academy">
+      <div class="footer-brand-name">FutureStack Intelligence Academy<span>Beyond the Horizon of Logic</span></div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="courses.html">Courses</a>
+      <a href="bootcamp.html">Free Bootcamp</a>
+      <a href="community.html">Community</a>
+      <a href="blog.html">Blog</a>
+      <a href="resources.html">Resources</a>
+      <a href="verify.html">Verify Certificate</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 FutureStack Intelligence Academy. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script>
+// Mobile menu toggle
+const ham = document.getElementById('ham');
+const mobileMenu = document.getElementById('mobileMenu');
+ham.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+
+// Course filter
+const filterBtns = document.querySelectorAll('.filter-btn');
+const courseCards = document.querySelectorAll('#coursesGrid .course-card');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    courseCards.forEach(card => {
+      card.style.display = (filter === 'all' || card.dataset.category === filter) ? 'flex' : 'none';
+    });
+  });
+});
+</script>
+</body>
+</html>
