@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>FutureStack Intelligence Academy — Community</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+.page-hero {
+  position: relative; z-index: 1;
+  background: linear-gradient(135deg, #04061a 0%, #060a1e 100%);
+  padding: 64px 40px 48px;
+  border-bottom: 1px solid var(--glass-border);
+  text-align: center;
+}
+.whatsapp-card {
+  max-width: 560px; margin: 0 auto; padding: 40px; text-align: center;
+}
+.whatsapp-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: white; font-family: var(--font-head); font-size: 13px; font-weight: 700;
+  letter-spacing: 1px; text-transform: uppercase; padding: 16px 32px; border-radius: 6px;
+  margin-top: 20px; transition: opacity 0.3s;
+}
+.whatsapp-btn:hover { opacity: 0.9; }
+.perks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+.perk-item { padding: 24px; }
+.perk-item .p-icon { font-size: 24px; margin-bottom: 10px; }
+.perk-item h4 { font-family: var(--font-head); font-size: 13px; color: white; margin-bottom: 8px; }
+.perk-item p { font-size: 12.5px; color: var(--muted); line-height: 1.7; }
+.guideline-list { display: flex; flex-direction: column; gap: 12px; }
+.guideline-item { display: flex; gap: 14px; padding: 16px 20px; align-items: flex-start; }
+.guideline-num { font-family: var(--font-mono); color: var(--gold); font-size: 12px; }
+.guideline-item p { font-size: 13px; color: var(--muted); line-height: 1.7; }
+@media (max-width: 768px) { .page-hero { padding: 48px 20px 36px; } .whatsapp-card { padding: 28px 20px; } }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo"><img src="logo.png" alt="FutureStack Intelligence Academy"><div class="nav-brand-text">FS Academy<span>Beyond The Horizon</span></div></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="bootcamp.html">Free Bootcamp</a></li>
+    <li><a href="community.html" class="active">Community</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="verify.html">Verify Certificate</a></li>
+    <li><a href="contact.html" class="nav-cta">Enroll Now</a></li>
+  </ul>
+  <div class="hamburger" id="ham"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="courses.html">Courses</a>
+  <a href="bootcamp.html">Free Bootcamp</a>
+  <a href="community.html" class="active">Community</a>
+  <a href="blog.html">Blog</a>
+  <a href="resources.html">Resources</a>
+  <a href="verify.html">Verify Certificate</a>
+  <a href="contact.html" class="m-cta">Enroll Now</a>
+</div>
+
+<div class="page-wrap">
+  <div class="page-hero">
+    <div class="section-tag" style="justify-content:center;">Learn Together</div>
+    <h1 class="section-title">Join The <span>Community</span></h1>
+    <p style="color:var(--muted);font-size:15px;max-width:500px;margin:0 auto;line-height:1.8;">Learning goes further with people around you doing the same thing. Join our WhatsApp community of students and mentors.</p>
+  </div>
+
+  <div class="page-wrap">
+    <div class="container">
+
+      <div class="glass-card whatsapp-card">
+        <span style="font-size:44px;">💬</span>
+        <h3 style="font-family:var(--font-head);font-size:16px;color:white;margin:14px 0 8px;">FS Academy WhatsApp Community</h3>
+        <p style="font-size:13px;color:var(--muted);line-height:1.8;">Ask questions, share progress, and connect with fellow learners and mentors — free for all enrolled students.</p>
+        <a href="https://chat.whatsapp.com/GH48eQl2gTgH5D16t5mzw3" target="_blank" class="whatsapp-btn">📱 Join WhatsApp Community</a>
+      </div>
+
+      <br><br>
+
+      <div class="section-tag">Why Join</div>
+      <h2 class="section-title">Community <span>Perks</span></h2>
+      <div class="perks-grid">
+        <div class="glass-card perk-item"><div class="p-icon">🤝</div><h4>Peer Support</h4><p>Get unstuck faster by learning alongside others on the same path.</p></div>
+        <div class="glass-card perk-item"><div class="p-icon">🎯</div><h4>Mentor Access</h4><p>Direct access to instructors and mentors for questions and guidance.</p></div>
+        <div class="glass-card perk-item"><div class="p-icon">📢</div><h4>Early Announcements</h4><p>Be first to know about new cohorts, courses, and bootcamp dates.</p></div>
+        <div class="glass-card perk-item"><div class="p-icon">💼</div><h4>Opportunities</h4><p>Job leads, project collabs, and networking within the community.</p></div>
+      </div>
+
+      <br><br>
+
+      <div class="section-tag">Ground Rules</div>
+      <h2 class="section-title">Community <span>Guidelines</span></h2>
+      <div class="guideline-list">
+        <div class="glass-card guideline-item"><span class="guideline-num">01</span><p>Be respectful — no harassment, discrimination, or spam of any kind.</p></div>
+        <div class="glass-card guideline-item"><span class="guideline-num">02</span><p>Keep discussions on-topic and relevant to learning and tech.</p></div>
+        <div class="glass-card guideline-item"><span class="guideline-num">03</span><p>No unauthorized promotion of unrelated products or services.</p></div>
+        <div class="glass-card guideline-item"><span class="guideline-num">04</span><p>Help others when you can — the community grows when everyone contributes.</p></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><img src="logo.png" alt="FutureStack Intelligence Academy"><div class="footer-brand-name">FutureStack Intelligence Academy<span>Beyond the Horizon of Logic</span></div></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="courses.html">Courses</a>
+      <a href="bootcamp.html">Free Bootcamp</a><a href="community.html">Community</a><a href="blog.html">Blog</a>
+      <a href="resources.html">Resources</a><a href="verify.html">Verify Certificate</a><a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 FutureStack Intelligence Academy. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('ham').addEventListener('click', () => document.getElementById('mobileMenu').classList.toggle('open'));
+</script>
+</body>
+</html>
