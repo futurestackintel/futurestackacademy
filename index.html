@@ -212,6 +212,10 @@
   border: 1px solid var(--glass-border);
   display: flex; align-items: center; justify-content: center;
   font-size: 36px; flex-shrink: 0;
+  overflow: hidden;
+}
+.instructor-avatar img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
 }
 .instructor-text { flex: 1; min-width: 240px; }
 .instructor-text h3 { font-family: var(--font-head); font-size: 17px; color: white; margin-bottom: 6px; }
@@ -477,7 +481,7 @@
       <div class="section-tag">Your Instructor</div>
       <h2 class="section-title">Taught By <span>Practitioners</span></h2>
       <div class="glass-card instructor-card">
-        <div class="instructor-avatar">👨‍💻</div>
+        <div class="instructor-avatar"><img src="instructor.jpg" alt="Lead Instructor"></div>
         <div class="instructor-text">
           <h3>Lead Instructor</h3>
           <div class="role">Founder, FutureStack Intelligence</div>
