@@ -569,9 +569,8 @@ document.querySelectorAll('.faq-item').forEach(item => {
   item.addEventListener('click', () => item.classList.toggle('open'));
 });
 
-// Countdown timer — set to next bootcamp date (placeholder: 14 days from page load)
-const bootcampDate = new Date();
-bootcampDate.setDate(bootcampDate.getDate() + 14);
+// Cohort 1 start date — locked: August 19, 2026
+const bootcampDate = new Date('2026-08-19T18:00:00+01:00');
 
 function updateCountdown() {
   const now = new Date();
