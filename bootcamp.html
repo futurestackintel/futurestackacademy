@@ -223,9 +223,8 @@ const ham = document.getElementById('ham');
 const mobileMenu = document.getElementById('mobileMenu');
 ham.addEventListener('click', () => mobileMenu.classList.toggle('open'));
 
-// Bootcamp countdown — placeholder: 14 days from page load (sync this with the homepage's date once set)
-const bootcampDate = new Date();
-bootcampDate.setDate(bootcampDate.getDate() + 14);
+// Cohort 1 start date — locked: August 19, 2026
+const bootcampDate = new Date('2026-08-19T18:00:00+01:00');
 
 function updateBcCountdown() {
   const now = new Date();
