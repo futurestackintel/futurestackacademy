@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>FutureStack Intelligence Academy — Student Registration</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+.page-hero {
+  position: relative; z-index: 1;
+  background: linear-gradient(135deg, #04061a 0%, #060a1e 100%);
+  padding: 64px 40px 48px;
+  border-bottom: 1px solid var(--glass-border);
+  text-align: center;
+}
+.register-box { max-width: 520px; margin: 0 auto; padding: 40px; }
+.form-group { margin-bottom: 16px; }
+.form-label { display: block; font-size: 11px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; font-family: var(--font-head); }
+.form-input {
+  width: 100%; background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border);
+  border-radius: 4px; padding: 12px 16px; color: white; font-size: 13.5px; font-family: var(--font-body);
+}
+.form-input::placeholder { color: var(--muted); }
+.form-input:focus { outline: none; border-color: rgba(0,234,255,0.4); }
+.btn-submit {
+  width: 100%; background: linear-gradient(135deg, var(--gold), #d99e2b); border: none; color: var(--bg-deep);
+  font-family: var(--font-head); font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 14px; border-radius: 4px; cursor: pointer; transition: opacity 0.3s;
+}
+.btn-submit:hover { opacity: 0.9; }
+.btn-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.result-box { display: none; text-align: center; padding: 8px 0; }
+.result-box.show { display: block; }
+.student-id-display {
+  font-family: var(--font-mono); font-size: 28px; font-weight: 700; color: var(--gold);
+  letter-spacing: 2px; margin: 16px 0; padding: 20px; border: 1px solid rgba(245,185,66,0.3);
+  border-radius: 6px; background: rgba(245,185,66,0.06);
+}
+.error-box { display: none; color: #ff5a5a; font-size: 13px; margin-top: 12px; text-align: center; }
+.error-box.show { display: block; }
+
+@media (max-width: 768px) { .page-hero { padding: 48px 20px 36px; } .register-box { padding: 28px 20px; } }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo"><img src="logo.png" alt="FutureStack Intelligence Academy"><div class="nav-brand-text">FSIA<span>Beyond The Horizon</span></div></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="bootcamp.html">Free Bootcamp</a></li>
+    <li><a href="community.html">Community</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="verify.html">Verify Certificate</a></li>
+    <li><a href="contact.html" class="nav-cta">Enroll Now</a></li>
+  </ul>
+  <div class="hamburger" id="ham"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="courses.html">Courses</a>
+  <a href="bootcamp.html">Free Bootcamp</a>
+  <a href="community.html">Community</a>
+  <a href="blog.html">Blog</a>
+  <a href="resources.html">Resources</a>
+  <a href="verify.html">Verify Certificate</a>
+  <a href="contact.html" class="m-cta">Enroll Now</a>
+</div>
+
+<div class="page-wrap">
+  <div class="page-hero">
+    <div class="section-tag" style="justify-content:center;">Get Your Student ID</div>
+    <h1 class="section-title">Register As A <span>Student</span></h1>
+    <p style="color:var(--muted);font-size:15px;max-width:500px;margin:0 auto;line-height:1.8;">Register once to get your FSIA Student ID — you'll use it across programs, certificates, and community access.</p>
+  </div>
+
+  <div class="page-wrap">
+    <div class="container">
+      <div class="glass-card register-box">
+
+        <form id="registerForm">
+          <div class="form-group"><label class="form-label">Full Name</label><input class="form-input" type="text" id="full_name" placeholder="Jane Doe" required></div>
+          <div class="form-group"><label class="form-label">Email Address</label><input class="form-input" type="email" id="email" placeholder="jane@example.com" required></div>
+          <div class="form-group"><label class="form-label">Country</label><input class="form-input" type="text" id="country" placeholder="e.g. Nigeria"></div>
+          <button type="submit" class="btn-submit" id="submitBtn">Get My Student ID →</button>
+          <div class="error-box" id="errorBox"></div>
+        </form>
+
+        <div class="result-box" id="resultBox">
+          <p style="color:var(--muted);font-size:13px;">✓ Registration successful. Your Student ID is:</p>
+          <div class="student-id-display" id="studentIdDisplay"></div>
+          <p style="color:var(--muted);font-size:12px;">Save this ID — you'll need it for future enrollment and certificate verification.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><img src="logo.png" alt="FutureStack Intelligence Academy"><div class="footer-brand-name">FutureStack Intelligence Academy<span>Beyond the Horizon of Logic</span></div></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="courses.html">Courses</a>
+      <a href="bootcamp.html">Free Bootcamp</a><a href="community.html">Community</a><a href="blog.html">Blog</a>
+      <a href="resources.html">Resources</a><a href="verify.html">Verify Certificate</a><a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 FutureStack Intelligence Academy. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('ham').addEventListener('click', () => document.getElementById('mobileMenu').classList.toggle('open'));
+
+// ================================================================
+// IMPORTANT: replace this with your actual deployed Worker URL
+// e.g. "https://fsia-backend.YOUR-SUBDOMAIN.workers.dev/register"
+// ================================================================
+const REGISTER_ENDPOINT = "https://fsia-backend.futurestack001.workers.dev/register";
+
+const form = document.getElementById('registerForm');
+const submitBtn = document.getElementById('submitBtn');
+const errorBox = document.getElementById('errorBox');
+const resultBox = document.getElementById('resultBox');
+const studentIdDisplay = document.getElementById('studentIdDisplay');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  errorBox.classList.remove('show');
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Registering...';
+
+  const full_name = document.getElementById('full_name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const country = document.getElementById('country').value.trim();
+
+  try {
+    const res = await fetch(REGISTER_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ full_name, email, country })
+    });
+    const data = await res.json();
+
+    if (!res.ok) {
+      throw new Error(data.error || 'Registration failed');
+    }
+
+    studentIdDisplay.textContent = data.student_id;
+    form.style.display = 'none';
+    resultBox.classList.add('show');
+  } catch (err) {
+    errorBox.textContent = '⚠ ' + err.message;
+    errorBox.classList.add('show');
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Get My Student ID →';
+  }
+});
+</script>
+</body>
+</html>
